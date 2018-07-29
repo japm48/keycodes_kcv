@@ -12,7 +12,7 @@ Shows information of every pressed key:
      97 [0x61] 0_11_00001 ('a')
       3 [0x03] 0_00_00011 (control char, base 'C', '^C')
 
-Invoke `make` to compile (and hopefully it just works...) and call `./kcv` to execute.
+Invoke `make` to compile (hopefully it just works...) and call `./kcv` to execute.
 
 By default, to exit the program, `q` must be pressed (`^C` won't work as it is captured):
 
@@ -33,7 +33,7 @@ For every pressed key it shows:
 
  * Binary separated in 3 bit fields in order:
 
-    * 1 bit that is 0 when the code does not belong to 7-bit ASCII.
+    * 1 bit that is `1` only when the code does not belong to 7-bit ASCII.
 
     * 2 bits showing (in general) whether it is a control char (`00`), a symbol (`01`), an uppercase letter (`10`) or a lowercase letter (`11`).
 
@@ -47,7 +47,7 @@ It is useful for stuff like:
 
  * Not having to search the ASCII code for `^C`:
 
-        3 [0x03] 0_00_00011 (control char, base 'C', '^C')
+         3 [0x03] 0_00_00011 (control char, base 'C', '^C')
 
  * Finding the relation between `A`, `Shift+A` and `Ctrl+A`:
 
@@ -68,7 +68,7 @@ It is useful for stuff like:
 
  * Realising that some key presses are actually translated as two keycodes, example `á`:
 
-        195 [0xc3] 1_10_00011 (other char, base 'C', '^C')
-        161 [0xa1] 1_01_00001 (other char, base 'A', '^A')
+       195 [0xc3] 1_10_00011 (other char, base 'C', '^C')
+       161 [0xa1] 1_01_00001 (other char, base 'A', '^A')
 
 
