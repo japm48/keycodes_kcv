@@ -152,7 +152,7 @@ void enable_raw_mode() {
    *   Set 8-bits per character.
    */
   raw.c_cflag &= ~(CSIZE); // Clear CSIZE Flags.
-  raw.c_cflag |=  (CSIZE | CS8); // Actually CS8 == CSIZE, but whatever...
+  raw.c_cflag |=  (CS8); // Set CSIZE: actually CS8 == CSIZE, but whatever...
 
   /*
    * MIN == 0, TIME > 0:
