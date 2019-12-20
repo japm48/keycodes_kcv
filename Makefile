@@ -7,7 +7,7 @@ all: $(TARGETEXE)
 .PHONY: all
 
 
-$(TARGETEXE): $(TARGETEXE).c terminit.c
+$(TARGETEXE): $(TARGETEXE).c term.c
 	$(CC) -o $@ $^ $(CFLAGS)
 
 
